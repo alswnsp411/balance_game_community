@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* 폰트 크기 상속 */
+    font-size: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    font-size: 20px;
+}
+
+html {
+    font-family: 'Jua', sans-serif;
+    /* `font` 속성 리셋 */
+    font-size                  : 16px;
+    /* 기본 글꼴 사이즈 정의            : 16x => 1rem */
+    font-weight                : normal;
+    line-height                : 1.5;
+    color                      : #4d5058;
+    /* 글꼴 크기 조정을 방지 */
+    -webkit-text-size-adjust   : 100%;
+    /* 폰트를 부드럽게 */
+    -webkit-font-smoothing     : antialiased;
+    -moz-osx-font-smoothing    : grayscale;
+    /* 웹킷 마음대로 눌림 하이라이트 막음 */
+    -webkit-tap-highlight-color: transparent;
+    background-color: #80e0ff;
+}
+
+/*navbar*/
+.navbar{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    background-color: beige;
+    z-index: 100;
+}
+
+.nav-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-right: 10rem !important;
+    padding-left: 10rem !important;
+}
+
+.navbar-brand{
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    color: #f0506e;
+    padding-right: 30px;
+}
+
+.navbarSupportedContent{
+}
+
+.navbar-nav{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+
+    margin-left: auto !important;
+    margin-right: 2.5rem; !important;
+}
+
+.nav-item{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.nav-link{
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.cloudbtn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+
+    font-weight: 500 !important;
+
+    color: #fff;
+    background-color: #0061f2;
+    border-color: #0061f2;
+}
+
+#newWriting{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 70px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 1200px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+}
+
+/* 테이블에서 일렬로 정렬하고싶을 때 */
+.table-line{
+    display: flex;
+    align-items: center ;
+}
+
+.data{
+    width: 100%;
+    height: 100%;
+}
+
+/*page header */
+.page-header{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.startimgcontent{
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+/*section
+section{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+*/
+
+/*비눗방울*/
+#background-wrap{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: none;
+    z-index: 101;
+}
+
+.bubble {
+    background-color: #bbdefb;
+    border-radius: 50%;
+
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    z-index: 102;
+}
+
+.bubble:after {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+
+    content: "";
+    height: 180px;
+    left: 10px;
+    position: absolute;
+    width: 180px;
+    z-index: 103;
+}
+
+.x1{
+    right: 700px;
+    bottom: 100px;
+    animation: animate_x1 2s linear;
+}
+
+@keyframes animate_x1 {
+    0%{
+        transform: translateY(50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.x2{
+    right: 1000px;
+    bottom: -200px;
+    animation: animate_x2 2s linear;
+}
+@keyframes animate_x2 {
+    20%{
+        transform: translateY(50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.x3 {
+    width: 1500px;
+    height: 1500px;
+    right: -100px;
+    bottom: -200px;
+    animation: animate_x3 2s linear;
+}
+
+@keyframes animate_x3 {
+    40%{
+        transform: translateY(10%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    z-index: 104;
+    position: absolute;
+    right: 700px;
+    bottom: 500px;
+    font-size: 50px;
+}
+.x4 {
+    background-color: #4d5058;
+    width: 100px;
+    height: 100px;
+    right: 100px;
+    bottom: 700px;
+    animation: animate_x4 2s linear;
+}
+
+@keyframes animate_x4 {
+    0%{
+        transform: translateY(50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+/*빨래줄*/
+svg{
+    position: relative;
+    top:35px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.towel-page{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 450px;
+    cursor: pointer;
+    padding-bottom: 100px;
+}
+.towel{
+    display: flex;
+}
+
+.balancegame{
+    width: 450px;
+    height: 470px;
+    position: absolute;
+    padding: 90px;
+    padding-top: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
